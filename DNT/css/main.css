@@ -1,0 +1,119 @@
+*{
+    --accent: #2f31d3;
+    --glow: 0 0 5px rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease-in-out;
+}
+body{
+    scroll-behavior: smooth;
+}
+body::before {
+    display: block;
+    content: " ";
+    height: 60px;
+}
+
+.banner,
+nav,
+footer {
+    background-color: var(--accent);
+    color: white;   
+}
+
+.head-line {
+    /* position: relative; */
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+.head-line h1 {
+    font-size: 5.3rem;
+}
+
+.head-line h1 span {
+    color: #1fb976;
+}
+
+.head-line p {
+    font-size: 1.6rem;
+    font-stretch: expanded;
+    font-weight: 600;
+}
+
+/* navbar-toggle */
+.navbar-collapse{
+    transition: all 0.3s ease-in-out;
+}
+.nav-item .nav-link:hover {
+    text-shadow: var(--glow);
+}
+.navbar-toggler-icon:hover{
+    /* Add your styles here to affect only the icon */
+    transform: scale(1.2);
+    transform: rotate(180deg);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Banner */
+.banner image-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 0;
+    max-width: 30rem;
+    transform: translateY(4rem) translateX(-15rem);
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+}
+
+
+
+/* Main */
+.news h2{
+    margin: 2rem;
+    margin-bottom: 0rem;
+}
+.line {
+    width: 8rem;
+    height: 2px;
+    background-color: var(--accent);
+}
+.news .card {
+    overflow-x: hidden;
+    max-width: 22rem;
+}
+.news .row{
+    margin-top: 3.3rem;
+}
+.news .card img {
+    width: auto;
+    height: 250px;
+}
+
+.news .card-text {
+    overflow-y: scroll;
+    max-height: 10rem;
+}
+.news .container .row > div{
+    display: flex;
+    justify-content: center;
+}
+
+
+/*! responsive */
+/* Footer */
+@media (max-width: 576px) {
+    html{
+        font-size: 86%;
+    }
+
+    footer .navbar-nav {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    footer .company-info {
+        text-align: center;
+    }
+}
