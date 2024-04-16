@@ -64,6 +64,8 @@ function submitForm() {
 
         console.log(localStorage.getItem('prodList'));
         var storedProductList = JSON.parse(localStorage.getItem('prodList'));
+
+        
         console.log(storedProductList.length);  
         alert("Đã lưu product");
 

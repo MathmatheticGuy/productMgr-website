@@ -1,5 +1,6 @@
 function load_info() {
     var products = JSON.parse(localStorage.getItem("prodList"));
+    
 
     if (products === null || products.length === 0) {
         alert("Không tìm được thông tin hàng hóa");

@@ -1,3 +1,5 @@
+// u@gmail.com -> user
+// a@gmail.com -> admin
 function login()
 {
     var email = document.getElementById("email").value;
