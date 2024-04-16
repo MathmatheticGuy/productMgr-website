@@ -30,7 +30,6 @@ document.querySelector("#prodName").onkeypress = function(e) {
 function clearInputs()
 {
     document.getElementById("prodName").value = '';
-    document.getElementById("prodID").value = '';
     document.getElementById("quantity").value = '';
     document.getElementById("price").value = '';
 }
@@ -39,11 +38,12 @@ var productList = [];
 
 function submitForm() {
     var productName = document.getElementById("prodName").value;
-    var productID = document.getElementById("prodID").value;
     var quantity = document.getElementById("quantity").value;
     var price = document.getElementById("price").value;
 
-    if (productName.length == 0 || productID.length == 0 || quantity.length == 0 || price.length == 0) {
+
+
+    if (productName.length == 0 || quantity.length == 0 || price.length == 0){
         alert("Không hợp lệ");
     } else if (price < 0) {
         alert("Giá không hợp lệ");
@@ -54,7 +54,7 @@ function submitForm() {
         document.getElementById("quantity").value = '';
 
     } else {
-        var newProduct = { id: productID, name: productName, quantity: quantity, price: price };
+        var newProduct = { name: productName, quantity: quantity, price: price};
         productList.push(newProduct);
 
         // Store the product in localStorage
@@ -64,13 +64,16 @@ function submitForm() {
 
         console.log(localStorage.getItem('prodList'));
         var storedProductList = JSON.parse(localStorage.getItem('prodList'));
+
+        
         console.log(storedProductList.length);  
         alert("Đã lưu product");
 
 
         document.getElementById("prodName").value = '';
-        document.getElementById("prodID").value = '';
         document.getElementById("quantity").value = '';
         document.getElementById("price").value = ''; 
+        
     }
 }
+

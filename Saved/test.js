@@ -13,7 +13,7 @@ function login()
     }
     else
     {
-        if (email == "demo@gmail.com" && pwd == "user")
+        if (email == "u@gmail.com" && pwd == "user")
         {
             alert("Login successful");
 
@@ -21,7 +21,7 @@ function login()
             localStorage.setItem("role", "user");
             // location.href = "main.html";
         }
-        else if (email == "admin@gmail.com" && pwd == "admin")
+        else if (email == "a@gmail.com" && pwd == "admin")
         {
             alert("Login successful");
 
@@ -31,16 +31,9 @@ function login()
         }
         else 
         {
-            console.log(email);
-            console.log(pwd);
-            alert("Tên hoặc mật khẩu không hợp lệ");
+            alert("Login successful");
+            window.location.href = "visitor.html?role=visitor";
+            localStorage.setItem("role", "visitor");
         }
     }
-}
-
-
-function clearInput()
-{
-    document.getElementById("email").value="";
-    document.getElementById("password").value="";
 }

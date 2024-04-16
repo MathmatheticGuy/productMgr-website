@@ -113,15 +113,6 @@ th {
     padding: 0.75rem;
 }
 
-/*? td of 2 Action Buttons */
-.action-buttons {
-    margin-top: 0.7rem;
-}
-
-.action-buttons .btn:first-child {
-    margin-right: 2rem;
-}
-/*? end of Action Buttons */
 
 .manage .card {
     display: flex;

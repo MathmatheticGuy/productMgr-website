@@ -11,15 +11,14 @@ console.log('super role: ' + super_role);
 // checking if user's role has permission to enter this page
 function check_input()
 {
-    var role = localStorage.getItem("role");
+    // var role = localStorage.getItem("role");
 
-    if (super_role == "user" || role == "user")
-    {
-        alert("Không có quyền truy cập");
-    }
-    else if (super_role == "admin" || role == "admin")
+    if (super_role == "admin")
     {
         location.href = "input.html?role=admin";
+    }
+    else{
+        alert("Không có quyền truy cập");
     }
 }
 

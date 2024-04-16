@@ -70,12 +70,22 @@ footer {
 
 
 /* Main */
-
+.news h2{
+    margin: 2rem;
+    margin-bottom: 0rem;
+}
+.line {
+    width: 8rem;
+    height: 2px;
+    background-color: var(--accent);
+}
 .news .card {
     overflow-x: hidden;
     max-width: 22rem;
 }
-
+.news .row{
+    margin-top: 3.3rem;
+}
 .news .card img {
     width: auto;
     height: 250px;
@@ -85,7 +95,10 @@ footer {
     overflow-y: scroll;
     max-height: 10rem;
 }
-
+.news .container .row > div{
+    display: flex;
+    justify-content: center;
+}
 
 
 /*! responsive */
